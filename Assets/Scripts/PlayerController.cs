@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Singleton
+    // TODO: Singleton
 
     // Character Controller
     private CharacterController _characterController;
 
     [SerializeField]
-    private float gravity = -1.0f, 
-    _speed = 15.0f;
+    private float gravity = -1.0f;
+    [SerializeField]
+    private float _speed = 15.0f;
 
     void Start()
     {
