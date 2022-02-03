@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     // TODO: Singleton
     private PlayerController _PlayerController;
+    private int _coins = 0;
 
     private void Start() {
 
@@ -16,6 +17,16 @@ public class GameManager : MonoBehaviour
                 _PlayerController.gameOver += gameOver;
             }        
         }
+    }
+
+    private void Update() 
+    {
+        if(SceneManager.GetActiveScene().name == "GameScene"){
+            if(Coins == 10)
+            {
+                print("You Won!");
+            }
+        }  
     }
     
     private void OnDestroy() {
@@ -39,5 +50,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("LoadScene");
     }
+
+    public void AddCoin()
+    {
+        _coins++;
+    }
+
+    public int Coins => _coins;
 
 }
