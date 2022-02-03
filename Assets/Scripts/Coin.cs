@@ -9,14 +9,15 @@ public class Coin : MonoBehaviour
     private void Start()
     {
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
-        if(_gameManager == null)
+        if (_gameManager == null)
         {
             Debug.Log("ERROR coins.cs -> Doesen't grab Game_Manager script class");
-        }    
+        }
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if(other.tag == "Player")
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
         {
             _gameManager.AddCoin();
             gameObject.SetActive(false);
