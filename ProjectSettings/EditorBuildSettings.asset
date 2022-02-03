@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/PauseScene.unity
     guid: bf93a56cd428a45469c03120a4c89101
+  - enabled: 1
+    path: Assets/_Scenes/WinScene.unity
+    guid: 2197913e542d47b40b3cf37038324746
   m_configObjects: {}

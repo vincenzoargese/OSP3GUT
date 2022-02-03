@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "GameScene"){
             if(Coins == 10)
             {
-                print("You Won!");
+                SceneManager.LoadScene("WinScene");
             }
         }  
     }
