@@ -19,16 +19,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update() 
+    private void Update()
     {
-        if(SceneManager.GetActiveScene().name == "GameScene"){
-            if(Coins == 10)
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            if (Coins == 10)
             {
                 SceneManager.LoadScene("WinScene");
             }
-        }  
+        }
+
+        // Quit Game
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+        
     }
-    
+
     private void OnDestroy() {
         if(_PlayerController != null)
         {
