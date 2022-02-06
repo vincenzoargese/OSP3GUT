@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     // TODO: Singleton
     private PlayerController _PlayerController;
     private int _coins = 0;
+    private bool _pauseGame = false;
 
     private void Start() {
 
@@ -65,5 +66,7 @@ public class GameManager : MonoBehaviour
     }
 
     public int Coins => _coins;
+
+
 
 }
